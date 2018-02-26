@@ -29,6 +29,12 @@ Hot reloading of tests
 ```sh
 $ npm test:watch
 ```
+
+#### Note
+
+If you want to change the bundle name you will have to override the filename property (project-name.js by default) inside the output config in the [pre compilation file](./pre-compilation.js) and [pro compilation file](./pro-compilation.js).
+
+
 License
 ----
 
