@@ -1,13 +1,8 @@
-// import {UserSearcherDTO} from "mks-appenco-domain/dist";
-// import {UserBS} from "../bs/UserBS";
-// import {ServicesRouteConstants} from "../constants/ServicesRouteConstants";
-// import {HttpConstants, JsonSerializationBS} from "mks-standard-infraestructure/dist";
 import {ServicesRouteConstants} from "../constants/ServicesRouteConstants";
 import {SomeDTO} from "../domain/SomeDTO";
 import {DbConnectionBS} from "../bs/DbConnectionBS";
 import {MongoDBConfigurationDTO} from "../domain/MongoDBConfigurationDTO";
 import * as express from "express";
-import {Db} from "mongodb"
 import {CollectionIndexCreator} from "../dao/CollectionIndexCreator";
 
 export class UserRestService {
@@ -23,8 +18,6 @@ export class UserRestService {
     }
 
     private async searchUserById() {
-
-        let connectionReference: any;
 
         this._app.get(ServicesRouteConstants.TEST_SERVICE, async function (req: express.Request, res: express.Response) {
             try {

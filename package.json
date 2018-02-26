@@ -16,7 +16,7 @@
     "url": "git+ssh://git@bitbucket.org:murphy_team/node-backend-template.git"
   },
   "author": "Álvaro Gómez Jáuregui, Alicia Fernández Rovira",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://bitbucket.org/murphy_team/node-backend-template",
   "dependencies": {
     "axios": "^0.17.1",
