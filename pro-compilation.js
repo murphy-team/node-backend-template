@@ -30,7 +30,7 @@ let config = {
         },
         output: {
             path: path.join(basePath, './dist'),
-            filename: 'ntsparksearch_backend.js'
+            filename: 'project-name.js'
         },
 
         // http://webpack.github.io/docs/configuration.html#devtool

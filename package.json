@@ -1,35 +1,32 @@
 {
-  "name": "ntsparksearch-backend",
+  "name": "node-backend-template",
   "version": "1.0.0",
-  "description": "NtSparkSearch",
-  "main": "index.js",
+  "description": "project-template",
+  "main": "index.ts",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha start -r ts-node/register ./test/src/**/*.spec.ts",
     "test:watch": "./node_modules/mocha/bin/mocha start --watch-extensions ts --watch -r ts-node/register ./test/src/**/*.spec.ts",
     "build": "npm install && ./node_modules/webpack/bin/webpack.js --env=pro-compilation",
     "build:dev": "npm install && ./node_modules/webpack/bin/webpack.js --env=pre-compilation",
     "start:dev": "./node_modules/webpack/bin/webpack.js --watch --env=pre-compilation",
-    "start:watch-server": "cd dist/ && ../node_modules/nodemon/bin/nodemon.js ntsparksearch_backend.js"
+    "start:watch-server": "cd dist/ && ../node_modules/nodemon/bin/nodemon.js project-name.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org:arananegrayeye/ntsparksearch_backend_node.git"
+    "url": "git+ssh://git@bitbucket.org:murphy_team/node-backend-template.git"
   },
-  "author": "Álvaro Gómez Jáuregui",
+  "author": "Álvaro Gómez Jáuregui, Alicia Fernández Rovira",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/arananegrayeye/ntsparksearch_backend_node#readme",
+  "homepage": "https://bitbucket.org/murphy_team/node-backend-template",
   "dependencies": {
     "axios": "^0.17.1",
     "xml2js": "^0.4.19",
     "body-parser": "^1.18.2",
     "core-js": "^2.4.1",
-    "bionode-fasta": "^0.5.6",
-    "xlsx": "^0.11.10",
     "express": "^4.15.3",
     "istanbul-instrumenter-loader": "^3.0.0",
     "json-object-mapper": "^1.5.1",
     "mongodb": "^2.2.33",
-    "mongoose": "^4.13.4",
     "q": "^1.5.1",
     "reflect-metadata": "^0.1.10"
   },
@@ -47,7 +44,6 @@
     "@types/q": "^1.0.6",
     "@types/sinon-stub-promise": "^1.1.1",
     "@types/webpack-env": "^1.13.2",
-    "@types/xml2js": "^0.4.2",
     "awesome-typescript-loader": "^3.4.0",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
