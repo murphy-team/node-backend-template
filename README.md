@@ -35,12 +35,12 @@ $ npm test:watch
 If you want to change the bundle name you will have to override the filename property (project-name.js by default) inside the output config in the [pre compilation file](./pre-compilation.js) and [pro compilation file](./pro-compilation.js).
 
 
-License
-----
-
 ### Development
 
 You can start building your app by creating .ts classes inside the dao + bs + domain modules. You have available a connection factory builder for mongoDB but you could implement your own.
+
+License
+----
 
 MIT
 
