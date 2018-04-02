@@ -7,11 +7,11 @@ This project is a skeleton for building great back-end apps using Node + Express
 
 ### Installation
 
-Install the dependencies and devDependencies and start the server.
+Install the dependencies and devDependencies and start the Nodemon dev server.
 
 ```sh
 $ npm install
-$ npm run-script start:dev && npm run-script start:watch-server
+$ npm start
 ```
 
 For production environments...
