@@ -12,6 +12,7 @@
     "emitDecoratorMetadata": true,
     "noLib": false,
     "preserveConstEnums": true,
+    "jsx": "react",
     "suppressImplicitAnyIndexErrors": true,
     "types": [
       "webpack-env",

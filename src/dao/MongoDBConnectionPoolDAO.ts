@@ -17,13 +17,18 @@ export class MongoDBConnectionPoolDAO {
     public static getInstance(configurationPool: MongoDBConfigurationDTO): Promise<MongoDBConnectionPoolDAO> {
         try {
 
-            return new Promise<MongoDBConnectionPoolDAO>(resolve => {
+            return new Promise<MongoDBConnectionPoolDAO>(async (resolve, reject) => {
                 if (this._instance._connectionPool == null) {
-                    this._instance._connectionPool = MongoClient.connect("mongodb://" + configurationPool.clientReference +
-                        ":" + configurationPool.port + "/" + configurationPool.databaseName);
+                    MongoClient.connect("mongodb://" + configurationPool.clientReference +
+                        ":" + configurationPool.port, (err, client) => {
+                        if (err) reject(err);
+                        else {
+                            this._instance._connectionPool = client.db(configurationPool.databaseName);
+                            console.log("POOL FIRST INSTANCE");
+                            resolve(MongoDBConnectionPoolDAO._instance);
+                        }
+                    });
 
-                    console.log("POOL FIRST INSTANCE");
-                    resolve(MongoDBConnectionPoolDAO._instance);
                 } else {
                     console.log("POOL FROM MEMORY");
                     resolve(MongoDBConnectionPoolDAO._instance);
@@ -36,7 +41,7 @@ export class MongoDBConnectionPoolDAO {
     }
 
 
-    public getConnectionPool(): any {
+    public getConnectionPool(): Db {
         return this._connectionPool;
     }
 }
